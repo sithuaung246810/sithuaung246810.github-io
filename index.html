@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary Par Mar</title>
+</head>
+<style>
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.preloader{
+	animation: rotate 2.3s cubic-bezier(0.75,0,0.5,1) infinite;
+
+}
+@keyframes rotate{
+	50%{
+		transform:rotate(360deg);
+	}
+	100%{
+		transform:rotate(720deg);
+	}
+
+}
+.preloader span{
+	height: 64px;
+	width: 64px;
+	display:block;
+	position: absolute;
+	background:#3fc1f2;
+	border: 1pz solid #3fc1f2;
+	border-radius: 100%;
+	cursor: pointer;
+
+}
+.preloader span:nth-child(1){
+	transform:translate(-28px,-28px);
+	animation: shape_1 2.3s cubic-bezier(0.75,0,0.5,1) infinite;
+}
+@keyframes shape_1{
+	60%{
+		transform:scale(0.4);
+	}
+
+}
+.preloader span:nth-child(2){
+	transform:translate(28px,-28px);
+	animation: shape_2 2.3s cubic-bezier(0.75,0,0.5,1) infinite;
+}
+@keyframes shape_2{
+	40%{
+		transform:scale(0.4);
+	}
+
+}
+.preloader span:nth-child(3){
+	position: relative;
+	border-radius: 0px;
+	transform:scale(0.98) rotate(-45deg);
+	animation: shape_3 2.3s cubic-bezier(0.75,0,0.5,1) infinite;
+}
+@keyframes shape_3{
+	50%{
+		border-radius: 100%;
+		transform:scale(0.5) rotate(-45deg);
+	}
+	100%{
+		transform:scale(0.98) rotate(-45deg);
+	}
+
+}
+.container .shadow{
+	position: relative;
+	display: block;
+	height: 16px;
+	width: 64px;v
+	background: #d9d9d9;
+	border: 1px solid d9d9d9;
+	border-radius: 50%;
+	top: 30px;
+	animation: shadow 2.3s cubic-bezier(0.75,0,0.5,1) infinite;
+
+}
+@keyframes shadow{
+	50%{
+		border-color: #f2f2f2;
+		transform:scale(0.6);
+	}
+	
+
+}
+/**for text animation**/
+body
+{
+	background-color:black;
+	margin: 0;
+	padding: 0;
+}
+h1
+{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-transform: uppercase;
+	font-family: consolas;
+	letter-spacing: 5px;
+	margin: 0;
+	padding: 0;
+	color: transparent;
+}
+h1:before
+{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #40D3DC;
+	overflow: hidden;
+	border-right: 1px solid #40D3DC;
+	animation: typing 10s steps(29)infinite;
+	white-space: nowrap;
+	cursor: pointer;
+	
+}
+@keyframes typing 
+{
+	0%
+	{
+		width: 0;
+	}
+	50%
+	{
+		width: 100%;
+	}
+	100%
+	{
+		width: 0;
+	}
+}
+
+</style>
+<body>
+    <h1 data-text="Happy Anniversary Par Mar Lay">Happy Anniversary Par Mar Lay</h1>
+
+	<div class="container">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			
+		</div>
+		<div class="shadow"></div>
+	</div>
+</body>
+</html>
